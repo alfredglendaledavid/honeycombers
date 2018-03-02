@@ -1,0 +1,35 @@
+.social {
+	padding-bottom: 5px;
+    margin-top: -3px;
+	a {
+		display: inline-block;
+		margin-left: .5em;
+		vertical-align: middle;
+		text-decoration: none;
+		font-size: 1.5em;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	.fa {
+		background-color: $white;
+		color: $orange;
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 25px;
+		vertical-align: middle;
+		padding: 1px;
+		font-size: 0.5em;
+	}
+}
+
+@include media('<=portrait') {
+	.social {
+		a {
+			font-size: 1.25em;
+		}
+	}
+}
