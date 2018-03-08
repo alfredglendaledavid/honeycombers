@@ -136,13 +136,13 @@ class HC_Authors {
 		if( !is_single() )
 			return;
 			
-		$blog_id = get_current_blog_id();
+		//$blog_id = get_current_blog_id();
 		
-		if ( $blog_id != 6 ) {
+		//if ( $blog_id != 6 ) {
 
 			$this->do_author_box( 'single' );
 		
-		}
+		//}
 
 	}
 

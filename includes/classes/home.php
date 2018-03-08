@@ -206,7 +206,7 @@ class HC_Home {
 							<div class="right">
                             	<?php $blog_id = get_current_blog_id();
 		
-                                if ( $blog_id != 6 ) { ?>
+                                //if ( $blog_id != 6 ) { ?>
                         
                                    
 									<?php echo get_avatar( $main_post->post_author, 70 ); ?>
@@ -216,7 +216,7 @@ class HC_Home {
 									echo '<p>' . $user->display_name . '</p>';
 									?>
                                     
-                                <?php } ?>
+                                <?php // } ?>
 							</div>
 						</a>
 					</div>

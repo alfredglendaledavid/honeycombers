@@ -110,9 +110,9 @@ class HC_Entry {
 						<div class="left">
 							<?php
 							
-							$blog_id = get_current_blog_id();
+							//$blog_id = get_current_blog_id();
 		
-							if ( $blog_id != 6 ) {
+							//if ( $blog_id != 6 ) {
 					
 								$lines   = array();
 								$lines[] = do_shortcode( __( 'By', CHILD_THEME_TEXT_DOMAIN ) . ' [post_author_posts_link]' );
@@ -123,7 +123,7 @@ class HC_Entry {
 	
 								echo '<p>' . implode( ', ', $lines ) . '</p>';
 							
-							}
+							//}
 							?>
 
 						</div>
