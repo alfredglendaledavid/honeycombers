@@ -593,14 +593,28 @@ abstract class HC_Form_Abstract {
 					break 1;
 				}
 
-				if( $file['size'] > ($field['max_size'] * 1024 * 1024) ) {
+				if( $file['size'] > ($field['maxFileSize'] * 1024) ) {
 					HC()->messages->add(
 						'error',
-						sprintf( '<strong>%s</strong> is too large. Please select a file under %sMB.', $field['label'], $field['max_size'])
+						sprintf( '<strong>%s</strong> is too large. Please select a file under %sKB.', $field['label'], $field['maxFileSize'])
 					);
+				}
+				
+				$image_info = getimagesize($file["tmp_name"]);
+				$image_width = $image_info[0];
+				$image_height = $image_info[1];
+				
+				if( ($image_width != 930) && ($image_height != 550)  ) {
+					HC()->messages->add(
+						'error',
+						sprintf( '<strong>%s</strong> must be exactly 930px in width and 550px in height.', $field['label'])
+					);
+					
 					$has_errors = true;
 					break 1;
 				}
+				
+				
 			}
 		}
 

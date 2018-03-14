@@ -47,6 +47,11 @@ class HC_Event_Editor extends HC_Form_Abstract {
 	public function setup_fields() {
 
 		$this->fields = array();
+		
+		$this->fields[] = array(
+			'label' => "Share your event with us: it's free! When posting an event, please keep in mind that all posts are subject to approval, and may be edited before publication. Your post will not appear immediately. ",
+			'classes'  => array('text-label'),
+		);
 
 		$this->fields[] = array(
 			'slug'     => 'post_title',
@@ -182,6 +187,8 @@ class HC_Event_Editor extends HC_Form_Abstract {
 			'type'     => 'term_list',
 			'table'    => 'postmeta',
 			'required' => true,
+			'descriptionPlacement' => 'above',
+			'description' => "Select one only.",
 			'taxonomy' => 'event-category',
 			'classes'  => array('one-half', 'first', 'event-category-field'),
 		);
@@ -192,9 +199,9 @@ class HC_Event_Editor extends HC_Form_Abstract {
 			'type'               => 'file',
 			'table'              => 'postmeta',
 			'required'           => true,
-			'description'        => 'Size: 850 (w) x 400 (h); max: 1MB; File format: .jpg, .jpeg ',
+			'description'        => 'We consider photos in landscape format only at 930x550 pixels, under 100kb. Clean images (not covered in text) are prioritised. ',
 			'allowed_mime_types' => array('image/jpg', 'image/jpeg'),
-			'max_size'           => 1,
+			'maxFileSize'        => 100,
 			'preview_type'       => 'image',
 			'preview_image_size' => 'archive-small',
 			'classes'            => array('one-half', 'block-image', 'first'),
@@ -353,7 +360,7 @@ class HC_Event_Editor extends HC_Form_Abstract {
 		$body .= "<tr><td><b>Website:</b></td><td> $website \r\n";
 		$body .= '</table>';
 
-		wp_mail( $to, $subj, $body, $headers, $attachments );
+		//wp_mail( $to, $subj, $body, $headers, $attachments );
 
 		wp_redirect( $url );
 		exit;

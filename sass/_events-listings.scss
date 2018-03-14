@@ -63,6 +63,13 @@
 	}
 }
 
+.text-label {
+	label {
+		text-transform: none!important;
+		font-family: $body!important;
+	}
+}
+
 .btn-claim {
 	display: block;
 	margin-bottom: (1.25em / .95);
