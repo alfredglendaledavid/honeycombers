@@ -455,3 +455,21 @@ $blog_id = get_current_blog_id();
 	
 }
 */
+
+/*
+* Yoast SEO Disable Automatic Redirects for
+* Posts And Pages
+* Credit: Yoast Development Team
+* Last Tested: May 09 2017 using Yoast SEO Premium 4.7.1 on WordPress 4.7.4
+*/
+
+add_filter('wpseo_premium_post_redirect_slug_change', '__return_true' );
+
+/*
+* Yoast SEO Disable Automatic Redirects for
+* Taxonomies (Category, Tags, Etc)
+* Credit: Yoast Development Team
+* Last Tested: May 09 2017 using Yoast SEO Premium 4.7.1 on WordPress 4.7.4
+*/
+
+add_filter('wpseo_premium_term_redirect_slug_change', '__return_true' );
