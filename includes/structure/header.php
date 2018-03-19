@@ -348,7 +348,7 @@ function hc_ga_content_grouping() {
 		$term =	$wp_query->queried_object;
 		$cat = '(not set)';
 	 
-		if ( is_page('singapore-event-calendar') ) {
+		if ( is_page('singapore-event-calendar') || is_page('whats-on-hong-kong') || is_page('calendar') ) {
 			$cat = 'Calendar';
 		} elseif ( is_home() || is_front_page() ) {
 			$cat = 'Home Page';
@@ -376,7 +376,7 @@ function hc_ga_content_grouping() {
 			$cat = 'Editorial Policy Page';
 		} elseif ( is_page('contact') ) {
 			$cat = 'Contact Page';
-		} elseif ( is_page('places-to-visit-in-singapore') ) {
+		} elseif ( is_page('places-to-visit-in-singapore') || is_page('directory') ) {
 			$cat = 'Directory Page';
 		} elseif ( $wp_query->is_category ) {
 			if ($term->parent > 0) {
