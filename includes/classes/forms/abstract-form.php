@@ -972,12 +972,12 @@ abstract class HC_Form_Abstract {
 				switch( $this->action ) {
 					case 'add':
 						?>
-						<button type="submit" name="hc_edit" class="btn btn-solid">Submit</button>
+						<button type="submit" name="hc_edit" class="btn btn-solid" id="hc_edit">Submit</button>
 						<?php
 						break;
 					case 'edit':
 						?>
-						<button type="submit" name="hc_edit" class="btn btn-solid">Update</button>
+						<button type="submit" name="hc_edit" class="btn btn-solid" id="hc_edit">Update</button>
 						<?php
 
 						if( $this->allow_delete ) {
