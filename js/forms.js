@@ -22,5 +22,5 @@
 			type: 'inline'
 		});
 	}
-
+ 
 })( window.jQuery );

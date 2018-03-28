@@ -34,5 +34,9 @@
 			}
 		});
 	});
+	
+	 $('#hc_edit').click(function(){
+         $(this).text('Validating...');
+     });
 
 })( window.jQuery );
