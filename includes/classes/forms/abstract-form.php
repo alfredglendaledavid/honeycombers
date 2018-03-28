@@ -581,8 +581,15 @@ abstract class HC_Form_Abstract {
 			}
 
 			foreach( $files as $file ) {
-				if( empty($file['size']) )
-					continue;
+				//if( empty($file['size']) )
+				//	continue;
+				
+				if( $file['size'] <= ($field['maxFileSize'] * 0) ) {
+					HC()->messages->add(
+						'error',
+						sprintf( '<strong>%s</strong> is empty.', $field['label'])
+					);
+				}
 
 				if( !in_array($file['type'], $field['allowed_mime_types'], true) ) {
 					HC()->messages->add(
@@ -599,6 +606,7 @@ abstract class HC_Form_Abstract {
 						sprintf( '<strong>%s</strong> is too large. Please select a file under %sKB.', $field['label'], $field['maxFileSize'])
 					);
 				}
+				
 				
 				$image_info = getimagesize($file["tmp_name"]);
 				$image_width = $image_info[0];
@@ -928,7 +936,7 @@ abstract class HC_Form_Abstract {
 	public function display_form() {
 
 		?>
-		<form method="post" enctype="multipart/form-data" class="hc-form entry-content">
+		<form method="post" enctype="multipart/form-data" class="hc-form entry-content" >
 			<div class="form-header clearfix">
 				<?php
 				if( isset($this->editor) ) {
