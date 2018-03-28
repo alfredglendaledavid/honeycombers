@@ -244,13 +244,13 @@ class HC_Menu {
                      <?php 
 					 	$blog_id = get_current_blog_id();
 					 	if ($blog_id === 2) {
-							$signup = 'http://thehoneycombers.com/singapore/sign-up/';
+							$signup = 'https://thehoneycombers.com/singapore/sign-up/';
 						} elseif ($blog_id === 4) {
-							$signup = 'http://thehoneycombers.com/bali/sign-up/';
+							$signup = 'https://thehoneycombers.com/bali/sign-up/';
 						} elseif ($blog_id === 3) {
-							$signup = 'http://thehoneycombers.com/jakarta/sign-up/';
+							$signup = 'https://thehoneycombers.com/jakarta/sign-up/';
 						} elseif ($blog_id === 6) {
-							$signup = 'http://thehoneycombers.com/hongkong/sign-up/';
+							$signup = 'https://thehoneycombers.com/hongkong/sign-up/';
 						}
 					?>
                     <li class="menu-item"><a class="menu-item-link" href="<?php echo $signup;?>" target="_blank">Sign Up</a></li>
