@@ -37,6 +37,11 @@
 	
 	 $('#hc_edit').click(function(){
          $(this).text('Validating...');
+		 setTimeout(function(){
+			 $('#hc_edit').text('Submit');
+		 }, 5000)
      });
+	 
+	 
 
 })( window.jQuery );

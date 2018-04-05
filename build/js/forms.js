@@ -5575,6 +5575,5 @@ return hooks;
 			type: 'inline'
 		});
 	}
-	
-
+ 
 })( window.jQuery );
