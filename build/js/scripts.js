@@ -6368,7 +6368,7 @@ function hc_maybe_load_facebook() {
          $(this).text('Validating...');
 		 setTimeout(function(){
 			 $('#hc_edit').text('Submit');
-		 }, 5000)
+		 }, 10000)
      });
 	 
 	 
