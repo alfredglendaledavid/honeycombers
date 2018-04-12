@@ -11,7 +11,7 @@ class HC_Event_Editor extends HC_Form_Abstract {
 		
 		$blog_id = get_current_blog_id();
 		
-		if ( $blog_id == 4 ) {
+		if ( $blog_id == 4 || $blog_id == 3 ) {
 		
 			$this->default_post_status = 'publish';
 		
